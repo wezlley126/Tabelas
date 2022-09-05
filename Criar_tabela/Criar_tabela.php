@@ -15,6 +15,8 @@
 
   if ($query) {
     echo "<br/> Deu certo";
+    $_SESSION['tabela_criada'] = 1;
+    header("Location: /Tabelas/Criar_tabela");
   }
 
   if ($query2) {
