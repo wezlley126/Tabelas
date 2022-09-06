@@ -1,0 +1,19 @@
+table{
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+th{
+  border: 2px outset black;
+  padding: 0.5rem;
+  background-color: #D3D3D3;
+}
+
+table tbody tr td{
+  border: 2px solid blue;
+  padding: 0.5rem;
+}
+
+table .input_valores{
+    padding: 0.5rem;
+}
