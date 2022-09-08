@@ -6,9 +6,9 @@
   echo "$nome_tabela";
   echo "$numero_colunas";
 
-  $comando = "CREATE TABLE ".$_SESSION['nome_tabela']."(".$_POST['campo0']." varchar(30))";
+  $comando = "CREATE TABLE ".$_SESSION['nome_tabela']."( id int not null auto_increment primary key )";
   $query = mysqli_query($conect, $comando);
-  for ($i=1; $i < $_SESSION['numero_colunas']; $i++) {
+  for ($i=0; $i < $_SESSION['numero_colunas']; $i++) {
       $comando_for = "ALTER TABLE ".$_SESSION['nome_tabela']." ADD COLUMN ".$_POST["campo$i"]." varchar(30)";
       $query2 = mysqli_query($conect, $comando_for);
   }

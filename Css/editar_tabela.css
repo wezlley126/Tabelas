@@ -17,3 +17,7 @@ table tbody tr td{
 table .input_valores{
     padding: 0.5rem;
 }
+
+table tbody tr .id_value{
+  padding: 0.5rem;
+}
