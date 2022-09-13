@@ -71,26 +71,5 @@
         $query_colunas = mysqli_query($conect, $exibir_colunas);
       ?>
 
-      <form class="" action="alterar_dados.php" method="post">
-        <select class="" name="id">
-          <?php
-            while($row_ids = mysqli_fetch_row($query_ids)){
-              echo "<option value = '$row_ids[0]'>$row_ids[0]</option>";
-            }
-          ?>
-        </select>
-        <select class="" name="coluna">
-          <?php
-            while($row_colunas = mysqli_fetch_row($query_colunas)){
-              if($row_colunas[0] !== 'id'){
-                echo "<option value = '$row_colunas[0]'>$row_colunas[0]</option>";
-              }
-            }
-          ?>
-        </select>
-        <input type="text" name="novo_valor" value="" placeholder="Novo valor">
-        <input type="submit" name="" value="Alterar">
-      </form>
-
   </body>
 </html>

@@ -16,6 +16,7 @@
     <?php
       //Verifica se a tabela existe;
       $tabela = mysqli_escape_string($conect, $_GET['tabela']);
+      $tabela = Limpar($tabela);
       echo "$tabela";
       $_SESSION['tabela'] = $tabela;
       $verifica_nome = "SHOW TABLES like '".$tabela."'";

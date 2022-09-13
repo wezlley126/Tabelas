@@ -13,6 +13,8 @@
 </head>
 <body>
 
+  <a href="../">Home</a>
+
     <form action="Colunas_tabela.php" method="post">
         <input type="text" name="nome_tabela" placeholder="Nome da tabela" required>
         <input type="number" name="numero_colunas" maxlength="2" min="1" oninput="this.value = Math.abs(this.value)" placeholder="Números de colunas" required>
