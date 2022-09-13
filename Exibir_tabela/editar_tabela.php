@@ -16,13 +16,12 @@
     <?php
       //Verifica se a tabela existe;
       $tabela = mysqli_escape_string($conect, $_GET['tabela']);
-      echo "$tabela";
       $_SESSION['tabela'] = $tabela;
       $verifica_nome = "SHOW TABLES like '".$tabela."'";
       $query = mysqli_query($conect, $verifica_nome);
       $row = mysqli_num_rows($query);
       if ($row === 1) {
-        echo "<br/>Tabela existente";
+
       }else{
         header('Location: index.php');
       }

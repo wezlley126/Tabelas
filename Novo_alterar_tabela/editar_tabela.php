@@ -17,13 +17,11 @@
       //Verifica se a tabela existe;
       $tabela = mysqli_escape_string($conect, $_GET['tabela']);
       $tabela = Limpar($tabela);
-      echo "$tabela";
       $_SESSION['tabela'] = $tabela;
       $verifica_nome = "SHOW TABLES like '".$tabela."'";
       $query = mysqli_query($conect, $verifica_nome);
       $row = mysqli_num_rows($query);
       if ($row === 1) {
-        echo "<br/>Tabela existente";
       }else{
         header('Location: index.php');
       }
@@ -64,15 +62,14 @@
 
               for ($linhas=0; $linhas < $row_linhas; $linhas++) {
                 $array_tabela[$linhas] = mysqli_fetch_row($query_linhas);
-                echo "Linha $linhas<br/><tr>";
-                print_r($array_tabela[$linhas]);
                 for ($colunas=0; $colunas < $row_colunas; $colunas++) {
                   echo "<td><input name='linha$linhas\_coluna$colunas' type='text' value='".$array_tabela[$linhas][$colunas]."'/></td>";
                   if ($colunas == $row_colunas-1) {
-                    echo "<br/></tr>";
+                    echo "</tr>";
                   }
                 }
               }
+              echo "<td>a</td>";
             ?>
           </tr>
         </tbody>
