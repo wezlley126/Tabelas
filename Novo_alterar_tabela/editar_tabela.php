@@ -69,7 +69,13 @@
                   }
                 }
               }
-              echo "<td>a</td>";
+              for ($i=0; $i < $row_colunas; $i++) {
+                if ($i === 0) {
+                  echo "<td>Adicionar</td>";
+                }else{
+                  echo "<td><input name='adicionar$i' type='text'/></td>";
+                }
+              }
             ?>
           </tr>
         </tbody>
