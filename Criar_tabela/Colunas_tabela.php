@@ -15,8 +15,8 @@
 
   <form method="post" action="Criar_tabela.php">
           <?php
-              $_SESSION['nome_tabela'] = mysqli_escape_string($conect, $_POST['nome_tabela']);
-              $_SESSION['numero_colunas'] = mysqli_escape_string($conect, $_POST['numero_colunas']);
+              $_SESSION['nome_tabela'] = Limpar($_POST['nome_tabela']);
+              $_SESSION['numero_colunas'] = Limpar($_POST['numero_colunas']);
 
               $tabela_existe = "SHOW TABLES LIKE '".$_SESSION['nome_tabela']."'";
               $query_tabela_existe = mysqli_query($conect, $tabela_existe);
@@ -26,12 +26,15 @@
                   echo "O nome de tabela já está sendo usado";
                 }else{
                   echo $_SESSION['nome_tabela']." Possui ".$_SESSION['numero_colunas']." colunas. <br/>";
+                  ?>
+                    <span style = "color: red;">Atenção, não pode utilizar Espaços nos nomes dos campos da tabela</span><br/>
+                  <?php
 
                   for ($i=0; $i < $_SESSION['numero_colunas']; $i++) {
                     echo "<input name='campo$i' type='text' placeholder='Nome do campo' required><br/>";
                   }
                   echo "<input type='submit' name='Criar_campos' value='Criar campos'>";
-                  
+
                 }
               }else {
                 echo "<br/>ERRO AO VERIFICAR SE TABELA EXISTE<br/>";
