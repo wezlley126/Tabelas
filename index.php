@@ -8,7 +8,8 @@
 
     <a href="/Tabelas/Criar_tabela">Criar tabela</a> <br/>
     <a href="/Tabelas/Exibir_tabela">Exibir tabela</a> <br/>
-    <a href="/Tabelas/Novo_alterar_tabela">Alterar tabela</a>
+    <a href="/Tabelas/Novo_alterar_tabela">Alterar tabela</a> <br/>
+    <a href="/Tabelas/Apagar_tabela">Apagar tabela</a>
 
   </body>
 </html>
