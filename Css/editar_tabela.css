@@ -1,6 +1,11 @@
 table{
   border: 2px solid black;
   padding: 1rem;
+  text-align: center;
+}
+
+input{
+  text-align: center;
 }
 
 th{
@@ -12,6 +17,10 @@ th{
 table tbody tr td{
   border: 2px solid blue;
   padding: 0.5rem;
+}
+
+table tbody tr .adicionar_linha{
+  border: 2px solid red;
 }
 
 table .input_valores{

@@ -28,6 +28,7 @@
     ?>
     <form class="" action="teste.php" method="post">
       <table>
+        <span class="thead_div">
         <thead>
           <tr>
             <?php
@@ -42,6 +43,7 @@
             ?>
           </tr>
         </thead>
+      </span>
         <tbody>
           <tr>
             <?php
@@ -59,6 +61,15 @@
               $_SESSION['linhas'] = $row_linhas;
               $_SESSION['colunas'] = $row_colunas;
               $array_tabela = array();
+              ?><tr><?php
+              for ($i=0; $i < $row_colunas; $i++) {
+                if ($i === 0) {
+                  echo "<td class='adicionar_linha'>Adicionar</td>";
+                }else{
+                  echo "<td class='adicionar_linha'><input name='adicionar$i' type='text'/></td>";
+                }
+              }
+              ?></tr><?php
 
               for ($linhas=0; $linhas < $row_linhas; $linhas++) {
                 $array_tabela[$linhas] = mysqli_fetch_row($query_linhas);
@@ -67,13 +78,6 @@
                   if ($colunas == $row_colunas-1) {
                     echo "</tr>";
                   }
-                }
-              }
-              for ($i=0; $i < $row_colunas; $i++) {
-                if ($i === 0) {
-                  echo "<td>Adicionar</td>";
-                }else{
-                  echo "<td><input name='adicionar$i' type='text'/></td>";
                 }
               }
             ?>

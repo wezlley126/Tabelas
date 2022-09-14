@@ -1,7 +1,7 @@
 <?php
   session_start();
   include("../Conect_mysql/conect.php");
-
+  unset($_SESSION['adicionar_vazio']);
 $tabela = array();
 
   for ($linhas=0; $linhas < $_SESSION['linhas']; $linhas++) {
@@ -26,6 +26,10 @@ $tabela = array();
     for ($j=0; $j < $_SESSION['colunas']; $j++) {
 
       $tabela[$i][$j] = Limpar($tabela[$i][$j]);
+      if ($tabela[$i][1] == 'drop') {
+        $drop_comando = "DELETE FROM ".$_SESSION['tabela']." WHERE id = ".$tabela[$i][0];
+        $query_drop = mysqli_query($conect, $drop_comando);
+      }
       $comando = 'UPDATE '.$_SESSION['tabela']." SET $colunas[$j] = '".$tabela[$i][$j]."' WHERE id = ".$tabela[$i][0];
       $update_query = mysqli_query($conect, $comando);
 
@@ -41,16 +45,31 @@ $tabela = array();
         break;
       }
   }
+  $GLOBALS['adicionar_comando'] = 'INSERT INTO '.$_SESSION['tabela']." VALUES (default, ";
+  for ($i=1; $i < $_SESSION['colunas']; $i++) {
+    if ($adicionar[$i] == null) {
+      $_SESSION['adicionar_vazio'] = 1;
+    }
+    if ($i+1 == $_SESSION['colunas']) {
+      $GLOBALS['adicionar_comando'] = $GLOBALS['adicionar_comando']."'$adicionar[$i]'); ";
+    } else {
+      $GLOBALS['adicionar_comando'] = $GLOBALS['adicionar_comando']."'$adicionar[$i]' ,";
+    }
 
-  $adicionar_comando = 'INSERT INTO '.$_SESSION['tabela']." VALUES (default, '$adicionar[1]', '$adicionar[2]', '$adicionar[3]')";
+  }
+
+  if (isset($_SESSION['adicionar_vazio'])) {
+
+  }else{
+
   $query_adicionar = mysqli_query($conect, $adicionar_comando);
   if ($query_adicionar) {
     echo "<br/>Todos os produtos foram adicionados";
   }
-
+}
   print_r($adicionar);
   echo "<br/>";
 
-  header('Location: ../Exibir_tabela/editar_tabela.php?tabela='.$_SESSION['tabela']);
+  header('Location: ../Novo_alterar_tabela/editar_tabela.php?tabela='.$_SESSION['tabela']);
   print_r($colunas);
 ?>
