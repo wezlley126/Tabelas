@@ -98,8 +98,14 @@
           }
 
           table tbody tr td{
-            border: 2px outset grey;
+            border: 2px outset black;
             padding: 0.5rem;
+          }
+
+          td:hover{
+            background-color: black;
+            color: white;
+            transition: 0.3s;
           }
 
           table tbody tr .adicionar_linha{
