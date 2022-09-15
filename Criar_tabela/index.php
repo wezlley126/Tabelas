@@ -47,126 +47,122 @@
           ?>
         </div>
         </div>
-        <style media="screen">
-        *{
-          margin: 0px;
-          padding: 0px;
-          max-width: 100%;
-          font-family: monospace, sans-serif;
-        }
+      <style media="screen">
+          *{
+            margin: 0px;
+            padding: 0px;
+            max-width: 100%;
+            font-family: monospace, sans-serif;
+          }
 
-        body{
-          display: grid;
-          justify-items: center;
-        }
+          h1{
+            grid-column: 1 / -1;
+          }
 
-        h1{
-          grid-column: 1 / -1;
-        }
+          .div_pai{
+            margin: 5% auto;
+            display: grid;
+            padding: 2rem 3rem;
+            gap: 3rem;
+            justify-items:center;
+            border: 2px solid black;
+            width: auto;
+            max-width: 1000px;
+          }
 
-        .div_pai{
-          margin: 5% auto;
-          display: grid;
-          padding: 2rem 3rem;
-          gap: 3rem;
-          justify-items:center;
-          border: 2px solid black;
-        }
+          .body_superior{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            text-align: center;
+          }
 
-        .body_superior{
-          display: grid;
-          grid-template-columns: auto 1fr;
-          gap: 1rem;
-          text-align: center;
-        }
+          .body_inferior{
+            display: grid;
+            justify-items: center;
+            text-align: center;
+            gap: 1rem;
+          }
 
-        .body_inferior{
-          display: grid;
-          justify-items: center;
-          text-align: center;
-          gap: 1rem;
-        }
+          .tabelas_existentes{
+            padding: 0px 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+            gap: 1rem;
+            justify-items: center;
+            text-align: center;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+          }
 
-        .tabelas_existentes{
-          padding: 0px 1rem;
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 1rem;
-          justify-items: center;
-          text-align: center;
-          border-left: 2px solid black;
-          border-right: 2px solid black;
-        }
-
-        .home{
-          border: 2px outset grey;
-          padding: 0.4rem 1rem;
-          align-self: start;
-          text-decoration: none;
-          color: black;
-        }
-
-        .home:hover{
-          background-color: black;
-          color: white;
-          animation-name: botoes;
-          animation-duration: 0.3s;
-        }
-
-        .home:focus{
-          background-color: black;
-          color: white;
-          animation-name: botoes;
-          animation-duration: 0.3s;
-        }
-
-        .ponta_ponta{
-          grid-column: 1 / -1;
-        }
-
-        .enviar_button{
-          cursor: pointer;
-          background-color: #C3C3C3;
-        }
-
-        form{
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          align-items: center;
-          gap: 0.5rem;
-          grid-column: 1 / -1;
-        }
-
-        input{
-          border: 2px outset grey;
-          padding: 0.5rem;
-        }
-
-        input:hover{
-          background-color: black;
-          color: white;
-          animation-name: botoes;
-          animation-duration: 0.3s;
-        }
-
-        input:focus{
-          background-color: black;
-          color: white;
-          animation-name: botoes;
-          animation-duration: 0.3s;
-        }
-
-        @keyframes botoes {
-          0%{
-            background-color: white;
+          .home{
+            border: 2px outset grey;
+            padding: 0.4rem 1rem;
+            align-self: start;
+            text-decoration: none;
             color: black;
           }
-          100%{
+
+          .home:hover{
             background-color: black;
             color: white;
+            animation-name: botoes;
+            animation-duration: 0.3s;
           }
-        }
 
-        </style>
+          .home:focus{
+            background-color: black;
+            color: white;
+            animation-name: botoes;
+            animation-duration: 0.3s;
+          }
+
+          .ponta_ponta{
+            grid-column: 1 / -1;
+          }
+
+          .enviar_button{
+            cursor: pointer;
+            background-color: #C3C3C3;
+          }
+
+          form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 0.5rem;
+            grid-column: 1 / -1;
+          }
+
+          input{
+            border: 2px outset grey;
+            padding: 0.5rem;
+          }
+
+          input:hover{
+            background-color: black;
+            color: white;
+            animation-name: botoes;
+            animation-duration: 0.3s;
+          }
+
+          input:focus{
+            background-color: black;
+            color: white;
+            animation-name: botoes;
+            animation-duration: 0.3s;
+          }
+
+          @keyframes botoes {
+            0%{
+              background-color: white;
+              color: black;
+            }
+            100%{
+              background-color: black;
+              color: white;
+            }
+          }
+      </style>
 </body>
 </html>
