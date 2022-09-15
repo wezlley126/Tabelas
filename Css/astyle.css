@@ -32,21 +32,31 @@ html, body{
   color: black;
   text-decoration: none;
   min-width: 150px;
-  border: 3px outset grey;
 }
 
-.opcoes a:hover{
+.opcoes_icons a:hover{
   animation-name: itens;
   animation-duration: 0.3s;
   background-color: black;
   color: white;
 }
-
 .opcoes a:focus{
   animation-name: itens;
   animation-duration: 0.3s;
   background-color: black;
   color: white;
+}
+
+.opcoes_icons{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 3px outset grey;
+  align-items: center;
+}
+
+.opcoes_icons img{
+  max-width: 60px;
+  margin: 0px 0.5rem;
 }
 
 @keyframes itens {
