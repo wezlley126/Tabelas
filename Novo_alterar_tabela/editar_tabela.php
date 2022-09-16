@@ -183,7 +183,7 @@
 
           .enviar{
             padding: 0.5rem 1.5rem;
-            margin-left: 1rem;
+            margin-left: 2rem;
             justify-self: center;
           }
 
