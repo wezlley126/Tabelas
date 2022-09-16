@@ -12,7 +12,6 @@
   <body>
     <div class="div_pai">
       <a class="home" href="/Tabelas">Home</a> <br>
-
       <?php
         //Verifica se a tabela existe;
         $tabela = Limpar($_GET['tabela']);
@@ -107,8 +106,8 @@
 
           table{
             padding: 1rem;
-            margin-left: 0px 1rem;
             text-align: center;
+            margin-left: 1rem;
           }
 
           input{
@@ -152,14 +151,10 @@
               padding: 0.5rem;
           }
 
-          table tbody tr .id_value{
-          }
-
-
           .div_pai{
             display: grid;
-            justify-items: center;
             gap: 0px;
+            justify-content: center;
           }
 
           .home{
@@ -169,11 +164,18 @@
             padding: 0.5rem 1rem;
             text-align: center;
             justify-self: start;
-            margin-left: 1rem;
+            margin-left: 2rem;
             margin-top: 1rem;
+            margin-bottom: 1rem;
           }
 
           .home:hover{
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+          }
+
+          .home:focus{
             background-color: black;
             color: white;
             transition: 0.3s;
@@ -184,7 +186,7 @@
             margin-left: 1rem;
             justify-self: center;
           }
-          
+
           .enviar:hover{
             background-color: black;
             color: white;
@@ -195,7 +197,9 @@
             background-color: black;
             color: white;
             transition: 0.3s;
-          }
+            }
+
+
       </style>
 
   </body>

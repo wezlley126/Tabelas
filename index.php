@@ -27,6 +27,10 @@
           <a href="/Tabelas/Novo_alterar_tabela">Alterar tabela</a>
         </span>
         <span class="opcoes_icons">
+          <img src="imgs/editar_colunas.png" alt="">
+          <a href="/Tabelas/Editar_colunas">Editar colunas</a>
+        </span>
+        <span class="opcoes_icons">
           <img src="imgs/excluir.png" alt="">
           <a href="/Tabelas/Apagar_tabela">Apagar tabela</a>
         </span>

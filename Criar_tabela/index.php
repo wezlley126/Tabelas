@@ -47,6 +47,8 @@
           ?>
         </div>
         </div>
+        <h2 class="aviso">AVISO: O nome tanto da tabela como dos campos não deve conter:<br/> espaços, caracteres especiais ou começar com números!!</h2>
+
       <style media="screen">
           *{
             margin: 0px;
@@ -151,6 +153,11 @@
             color: white;
             animation-name: botoes;
             animation-duration: 0.3s;
+          }
+          .aviso{
+            grid-column: 1 / -1;
+            color: red;
+            text-align: center;
           }
 
           @keyframes botoes {
