@@ -32,5 +32,27 @@
         </span>
     </nav>
 
+    <style media="screen">
+            *{
+              margin: 0px;
+              padding: 0px;
+              font-family: monospace, sans-serif;
+            }
+
+          .opcoes_icons a:hover{
+            background-color: black;
+            animation-name: itens;
+            animation-duration: 0.3s;
+          }
+          @keyframes itens {
+            0%{
+              background-color: white
+            }
+            100%{
+              background-color: black;
+            }
+          }
+    </style>
+
   </body>
 </html>

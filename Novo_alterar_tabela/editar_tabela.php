@@ -15,7 +15,7 @@
 
       <?php
         //Verifica se a tabela existe;
-        $tabela = mysqli_escape_string($conect, $_GET['tabela']);
+        $tabela = Limpar($_GET['tabela']);
         $tabela = Limpar($tabela);
         $_SESSION['tabela'] = $tabela;
         $verifica_nome = "SHOW TABLES like '".$tabela."'";
@@ -104,12 +104,10 @@
             font-family: arial, monospace, sans-serif;
           }
 
-          table{
-            margin-left: 0px 1rem;
-          }
 
           table{
             padding: 1rem;
+            margin-left: 0px 1rem;
             text-align: center;
           }
 
@@ -160,6 +158,7 @@
 
           .div_pai{
             display: grid;
+            justify-items: center;
             gap: 0px;
           }
 
@@ -185,6 +184,7 @@
             margin-left: 1rem;
             justify-self: center;
           }
+          
           .enviar:hover{
             background-color: black;
             color: white;
