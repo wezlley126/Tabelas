@@ -43,6 +43,10 @@
               font-family: monospace, sans-serif;
             }
 
+            a{
+              font-size: 1.2rem;
+            }
+
           .opcoes_icons a:hover{
             background-color: black;
             animation-name: itens;
