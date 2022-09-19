@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="Css/astyle.css">
   </head>
   <body>
-
+    <div class="button">
+      <a class="home" href="users/Deslogar.php">Deslogar</a>
+    </div>
     <span class="titulos">
       <h1>Sistema organizacional de tabelas</h1>
       <h2>Selecione a opção que deseja realizar.</h2>
@@ -34,6 +36,10 @@
           <img src="imgs/excluir.png" alt="">
           <a href="/Tabelas/Apagar_tabela">Apagar tabela</a>
         </span>
+        <span class="opcoes_icons">
+          <img src="imgs/login.png" alt="">
+          <a href="/Tabelas/users">Login</a>
+        </span>
     </nav>
 
     <style media="screen">
@@ -52,6 +58,25 @@
             animation-name: itens;
             animation-duration: 0.3s;
           }
+
+          .button{
+            display: grid;
+          }
+
+          .home{
+            text-decoration: none;
+            color: red;
+            border: 2px solid red;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            justify-self: start;
+          }
+          .home:hover{
+            background-color: black;
+            transition: 0.3s;
+          }
+
           @keyframes itens {
             0%{
               background-color: white
