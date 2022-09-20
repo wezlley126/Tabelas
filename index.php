@@ -42,6 +42,8 @@
         </span>
     </nav>
 
+        <div id="weslley"><a href="https://github.com/wezlley126">© weslley</a></div>
+
     <style media="screen">
             *{
               margin: 0px;
@@ -75,6 +77,11 @@
           .home:hover{
             background-color: black;
             transition: 0.3s;
+          }
+
+          #weslley{
+            text-align: center;
+            font-size: 1.2rem;
           }
 
           @keyframes itens {

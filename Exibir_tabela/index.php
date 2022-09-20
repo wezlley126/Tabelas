@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -48,7 +49,6 @@
           font-size: 1.5rem;
         }
 
-
         .tabelas{
           width: 100%;
           padding: 1rem 0px;
@@ -77,6 +77,8 @@
         }
 
     </style>
+
+    <div style="text-align: center; font-size: 1.2rem;" id="weslley"><a href="https://github.com/wezlley126">© weslley</a></div>
 
   </body>
 </html>

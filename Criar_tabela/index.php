@@ -171,5 +171,8 @@
             }
           }
       </style>
+      
+      <div style="text-align: center; font-size: 1.2rem;" id="weslley"><a href="https://github.com/wezlley126">© weslley</a></div>
+
 </body>
 </html>
