@@ -18,27 +18,27 @@
     <nav aria-label="Primária" class = "opcoes">
         <span class="opcoes_icons">
           <img src="imgs/criar.png" alt="">
-          <a href="/Tabelas/Criar_tabela">Criar tabela</a>
+          <a href="Criar_tabela">Criar tabela</a>
         </span>
         <span class="opcoes_icons">
           <img src="imgs/exibir.png" alt="">
-          <a href="/Tabelas/Exibir_tabela">Exibir tabela</a>
+          <a href="Exibir_tabela">Exibir tabela</a>
         </span>
         <span class="opcoes_icons">
           <img src="imgs/alterar.png" alt="">
-          <a href="/Tabelas/Novo_alterar_tabela">Alterar tabela</a>
+          <a href="Novo_alterar_tabela">Alterar tabela</a>
         </span>
         <span class="opcoes_icons">
           <img src="imgs/editar_colunas.png" alt="">
-          <a href="/Tabelas/Editar_colunas">Editar colunas</a>
+          <a href="Editar_colunas">Editar colunas</a>
         </span>
         <span class="opcoes_icons">
           <img src="imgs/excluir.png" alt="">
-          <a href="/Tabelas/Apagar_tabela">Apagar tabela</a>
+          <a href="Apagar_tabela">Apagar tabela</a>
         </span>
         <span class="opcoes_icons">
           <img src="imgs/login.png" alt="">
-          <a href="/Tabelas/users">Login</a>
+          <a href="users">Login</a>
         </span>
     </nav>
 

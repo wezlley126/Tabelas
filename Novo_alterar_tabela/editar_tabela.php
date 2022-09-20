@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="div_pai">
-      <a class="home" href="/Tabelas">Home</a> <br>
+      <a class="home" href="/SF_camisas/Tabelas">Home</a> <br>
       <?php
         //Verifica se a tabela existe;
         $tabela = Limpar($_GET['tabela']);

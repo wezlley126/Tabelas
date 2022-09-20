@@ -18,10 +18,10 @@
   if ($row === 1) {
     $_SESSION['user'] = mysqli_fetch_row($query);
     echo "string";
-    header('Location: /Tabelas');
+    header('Location: /SF_camisas/Tabelas');
   }else{
     unset($_SESSION['user']);
-    header('Location: /Tabelas');
+    header('Location: SF_camisas/Tabelas');
   }
 
 ?>
