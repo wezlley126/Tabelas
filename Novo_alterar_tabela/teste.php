@@ -21,6 +21,29 @@ $tabela = array();
 
   unset($comando_columns, $query_columns, $row, $i);
 
+  $i = 1;
+  $j = 1;
+  @$GLOBALS['comando'] = 'UPDATE '.$_SESSION['tabela']." SET ";
+  //$update_query = mysqli_query($conect, $GLOBALS['comando']);
+
+  for ($i=0; $i < $_SESSION['linhas']; $i++) {
+    for ($j=1; $j < $_SESSION['colunas']; $j++) {
+      if ($j+1 === $_SESSION['colunas']) {
+        $GLOBALS['comando'] = $GLOBALS['comando'].", $colunas[$j] = '".$tabela[$i][$j]."' WHERE id = ".$tabela[$i][0];
+        //echo $GLOBALS['comando'];
+        $update_query = mysqli_query($conect, $GLOBALS['comando']);
+        $GLOBALS['comando'] = 'UPDATE '.$_SESSION['tabela']." SET ";
+      }else{
+        if($j === 1){
+          $GLOBALS['comando'] = $GLOBALS['comando']." $colunas[$j] = '".$tabela[$i][$j]."'";
+        }else{
+          $GLOBALS['comando'] = $GLOBALS['comando'].", $colunas[$j] = '".$tabela[$i][$j]."'";
+        }
+      }
+    }
+  }
+
+  echo "<br/>".$GLOBALS['comando'];
 
   for ($i=0; $i < $_SESSION['linhas']; $i++) {
     for ($j=0; $j < $_SESSION['colunas']; $j++) {
@@ -30,8 +53,9 @@ $tabela = array();
         $drop_comando = "DELETE FROM ".$_SESSION['tabela']." WHERE id = ".$tabela[$i][0];
         $query_drop = mysqli_query($conect, $drop_comando);
       }
-      $comando = 'UPDATE '.$_SESSION['tabela']." SET $colunas[$j] = '".$tabela[$i][$j]."' WHERE id = ".$tabela[$i][0];
-      $update_query = mysqli_query($conect, $comando);
+      if ($colunas != 0) {
+
+      }
 
     }
   }

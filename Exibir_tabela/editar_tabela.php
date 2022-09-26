@@ -13,6 +13,11 @@
   <body>
   <div class="div_pai">
       <a class="home" href="/Tabelas">Home</a> <br>
+      <form class="pesquisar" action="" method="post">
+          <img class="icons" src="../imgs/buscar.png" alt="">
+          <input class="home" type="text" name="pesquisa" value="" placeholder="Pesquisar">
+          <input class="home" type="submit" name="" value=" Buscar">
+      </form>
 
       <?php
         //Verifica se a tabela existe;
@@ -47,7 +52,14 @@
               <?php
                 //Exibe os valores dentro das colunas da tabela;
                 $valor = 0;
-                $exibir_linhas = "SELECT * FROM ".$tabela;
+                @$procurar = Limpar($_POST['pesquisa']);
+                if (isset($_POST['pesquisa'])) {
+                  $exibir_linhas = "SELECT * FROM ".$tabela;
+
+                }else{
+                  $exibir_linhas = "SELECT * FROM ".$tabela;
+
+                }
                 $query_linhas = mysqli_query($conect, $exibir_linhas);
                 while ($row = mysqli_fetch_row($query_linhas)) {
                   $array_lenght = count($row);
@@ -142,6 +154,22 @@
             background-color: black;
             color: white;
             transition: 0.3s;
+          }
+
+          .pesquisar{
+            display: flex;
+            margin-left: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+          }
+
+          .pesquisar input{
+            margin: 0px;
+          }
+
+
+          .icons{
+            max-width: 40px;
           }
       </style>
 

@@ -82,9 +82,9 @@
               echo "<h2 class='campo_vazio'>O campo não pode estar vázio!!</h2>";
             }else{
               if($coluna_apos == 'first'){
-                $adicionar_coluna = "ALTER TABLE ".$_SESSION['tabela']." ADD COLUMN ".$nome_coluna." VARCHAR(100) ".$coluna_apos;
+                $adicionar_coluna = "ALTER TABLE ".$_SESSION['tabela']." ADD COLUMN ".$nome_coluna." VARCHAR(255) ".$coluna_apos;
               }else{
-                $adicionar_coluna = "ALTER TABLE ".$_SESSION['tabela']." ADD COLUMN ".$nome_coluna." VARCHAR(100) AFTER ".$coluna_apos;
+                $adicionar_coluna = "ALTER TABLE ".$_SESSION['tabela']." ADD COLUMN ".$nome_coluna." VARCHAR(255) AFTER ".$coluna_apos;
               }
               $query_coluna_adicionada = mysqli_query($conect, $adicionar_coluna);
               }

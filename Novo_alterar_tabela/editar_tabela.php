@@ -64,7 +64,7 @@
                 ?><tr><?php
                 for ($i=0; $i < $row_colunas; $i++) {
                   if ($i === 0) {
-                    echo "<td class='adicionar_linha'>Adicionar</td>";
+                    echo "<td id='adicionar' class='adicionar_linha'>Adicionar</td>";
                   }else{
                     echo "<td class='adicionar_linha'><input name='adicionar$i' type='text'/></td>";
                   }
@@ -104,6 +104,9 @@
             font-family: arial, monospace, sans-serif;
           }
 
+          body{
+            display: grid;
+          }
 
           table{
             padding: 1rem;
@@ -114,6 +117,7 @@
           input{
             text-align: center;
             padding: 0.5rem;
+            border: none;
           }
 
           input:hover{
@@ -142,6 +146,7 @@
             background-color: black;
             color: white;
             transition: 0.3s;
+            display: grid;
           }
 
           table tbody tr .adicionar_linha{
@@ -186,6 +191,7 @@
             padding: 0.5rem 1.5rem;
             margin-left: 2rem;
             justify-self: center;
+            border: 2px solid black;
           }
 
           .enviar:hover{
@@ -198,8 +204,7 @@
             background-color: black;
             color: white;
             transition: 0.3s;
-            }
-
+          }
 
       </style>
 
