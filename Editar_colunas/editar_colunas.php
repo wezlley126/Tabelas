@@ -60,7 +60,6 @@
             <?php
               $colunas = "SHOW COLUMNS FROM ".$_SESSION['tabela'];
               $query_colunas = mysqli_query($conect, $colunas);
-              echo "<option value='first'>Primeiro</option>";
               while($row = mysqli_fetch_row($query_colunas)) {
                 echo "<option value='$row[0]'>$row[0]</option>";
               }
@@ -81,11 +80,7 @@
             if($nome_coluna == null) {
               echo "<h2 class='campo_vazio'>O campo não pode estar vázio!!</h2>";
             }else{
-              if($coluna_apos == 'first'){
-                $adicionar_coluna = "ALTER TABLE ".$_SESSION['tabela']." ADD COLUMN ".$nome_coluna." VARCHAR(255) ".$coluna_apos;
-              }else{
                 $adicionar_coluna = "ALTER TABLE ".$_SESSION['tabela']." ADD COLUMN ".$nome_coluna." VARCHAR(255) AFTER ".$coluna_apos;
-              }
               $query_coluna_adicionada = mysqli_query($conect, $adicionar_coluna);
               }
             }else{
