@@ -7,6 +7,7 @@ $tabela = array();
   for ($linhas=0; $linhas < $_SESSION['linhas']; $linhas++) {
     for ($colunas=0; $colunas < $_SESSION['colunas']; $colunas++) {
       $tabela[$linhas][$colunas] = $_POST["linha$linhas\_coluna$colunas"];
+      unset( $_POST["linha$linhas\_coluna$colunas"]);
     }
   }
 

@@ -14,12 +14,11 @@
   <div class="div_pai">
       <a class="home" href="/Tabelas">Home</a> <br>
       <form class="pesquisar" action="" method="post">
-          <img class="icons" src="../imgs/buscar.png" alt="">
-          <input class="home" type="text" name="pesquisa" value="" placeholder="Pesquisar">
-          <input class="home" type="submit" name="" value=" Buscar">
+          <input class="home" type="submit" name="pesquisar_true" value="Pesquisar">
       </form>
 
       <?php
+
         //Verifica se a tabela existe;
         $tabela = Limpar($_GET['tabela']);
         $_SESSION['tabela'] = $tabela;
@@ -37,12 +36,14 @@
             <tr>
               <?php
                 //Verifica e exibe as colunas existentes;
+                $_SESSION['colunas'] = array();
                 $exibir_colunas = "SHOW COLUMNS FROM ".$tabela;
                 $query_colunas = mysqli_query($conect, $exibir_colunas);
                 $row_quantidade = mysqli_num_rows($query_colunas);
                 echo "<tr><th colspan='$row_quantidade'>$tabela</th></tr>";
                 while ($row = mysqli_fetch_row($query_colunas)) {
                     echo "<th>$row[0]</th>";
+                    $_SESSION['colunas'] = $row;
                 }
               ?>
             </tr>
@@ -52,21 +53,27 @@
               <?php
                 //Exibe os valores dentro das colunas da tabela;
                 $valor = 0;
-                @$procurar = Limpar($_POST['pesquisa']);
-                if (isset($_POST['pesquisa'])) {
-                  $exibir_linhas = "SELECT * FROM ".$tabela;
-
+                if (isset($_POST['pesquisar_true'])) {
+                  if(isset($procurar)){
+                    $procurar = Limpar($_POST['pesquisa']);
+                  }
+                    $exibir_linhas = "SELECT * FROM ".$tabela;
                 }else{
                   $exibir_linhas = "SELECT * FROM ".$tabela;
-
                 }
                 $query_linhas = mysqli_query($conect, $exibir_linhas);
                 while ($row = mysqli_fetch_row($query_linhas)) {
                   $array_lenght = count($row);
                   echo "<tr>";
+
+                  for ($i=0; $i < $array_lenght; $i++) {
+                      echo "<td>$row[$i]</td>";
+                  }
+                  /*
                   foreach ($row as $key => $value) {
                       echo "<td class='id_value'>$value</td>";
                   }
+                  */
                   echo "</tr>";
                 }
               ?>
@@ -113,6 +120,7 @@
           table tbody tr td{
             border: 2px outset black;
             padding: 0.5rem;
+            height: 50px;
           }
 
           td:hover{
@@ -170,6 +178,35 @@
 
           .icons{
             max-width: 40px;
+          }
+
+          .select_pesquisa{
+            padding: 0.5rem 1rem;
+            text-align: center;
+          }
+
+          .select_pesquisa:hover{
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+          }
+
+          .select_pesquisa:focus{
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+          }
+
+          .pesquisar_form{
+            margin-left: 1rem;
+            border: 2px solid black;
+            background-color: red;
+          }
+
+          #tabela_dividir{
+            background-color: black;
+            position: absolute;
+            height: 100vh;
           }
       </style>
 

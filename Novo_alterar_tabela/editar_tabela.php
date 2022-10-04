@@ -11,6 +11,125 @@
     <title></title>
   </head>
   <body>
+    <style media="screen">
+        *{
+          margin: 0px;
+          padding: 0px;
+          max-width: 100%;
+          font-family: arial, monospace, sans-serif;
+        }
+
+        body{
+          display: grid;
+        }
+
+        table{
+          padding: 1rem;
+          text-align: center;
+          margin-left: 1rem;
+        }
+
+        input{
+          text-align: center;
+          padding: 0.5rem;
+          border: none;
+        }
+
+        input:hover{
+          background-color: black;
+          color: white;
+          transition: 0.3s;
+        }
+
+        input:focus{
+          background-color: black;
+          color: white;
+          transition: 0.3s;
+        }
+
+        th{
+          border: 2px outset black;
+          padding: 0.5rem;
+          background-color: #D3D3D3;
+        }
+
+        table tbody tr td{
+          border: 2px outset black;
+        }
+
+        td:hover{
+          background-color: black;
+          color: white;
+          transition: 0.3s;
+          display: grid;
+        }
+
+        td:focus{
+          background-color: black;
+          color: white;
+          transition: 0.3s;
+          display: grid;
+        }
+
+        table tbody tr .adicionar_linha{
+          border: 2px solid red;
+        }
+
+        table .input_valores{
+            padding: 0.5rem;
+        }
+
+        .div_pai{
+          display: grid;
+          gap: 0px;
+          justify-content: center;
+        }
+
+        .home{
+          text-decoration: none;
+          color: black;
+          border: 2px solid black;
+          padding: 0.5rem 1rem;
+          text-align: center;
+          justify-self: start;
+          margin-left: 2rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .home:hover{
+          background-color: black;
+          color: white;
+          transition: 0.3s;
+        }
+
+        .home:focus{
+          background-color: black;
+          color: white;
+          transition: 0.3s;
+        }
+
+        .enviar{
+          padding: 0.5rem 1.5rem;
+          margin-left: 2rem;
+          justify-self: center;
+          border: 2px solid black;
+        }
+
+        .enviar:hover{
+          background-color: black;
+          color: white;
+          transition: 0.3s;
+        }
+
+        .enviar:focus{
+          background-color: black;
+          color: white;
+          transition: 0.3s;
+        }
+
+    </style>
+
     <div class="div_pai">
       <a class="home" href="/Tabelas">Home</a> <br>
       <?php
@@ -96,117 +215,7 @@
           $query_colunas = mysqli_query($conect, $exibir_colunas);
         ?>
       </div>
-      <style media="screen">
-          *{
-            margin: 0px;
-            padding: 0px;
-            max-width: 100%;
-            font-family: arial, monospace, sans-serif;
-          }
 
-          body{
-            display: grid;
-          }
-
-          table{
-            padding: 1rem;
-            text-align: center;
-            margin-left: 1rem;
-          }
-
-          input{
-            text-align: center;
-            padding: 0.5rem;
-            border: none;
-          }
-
-          input:hover{
-            background-color: black;
-            color: white;
-            transition: 0.3s;
-          }
-
-          input:focus{
-            background-color: black;
-            color: white;
-            transition: 0.3s;
-          }
-
-          th{
-            border: 2px outset black;
-            padding: 0.5rem;
-            background-color: #D3D3D3;
-          }
-
-          table tbody tr td{
-            border: 2px outset black;
-          }
-
-          td:hover{
-            background-color: black;
-            color: white;
-            transition: 0.3s;
-            display: grid;
-          }
-
-          table tbody tr .adicionar_linha{
-            border: 2px solid red;
-          }
-
-          table .input_valores{
-              padding: 0.5rem;
-          }
-
-          .div_pai{
-            display: grid;
-            gap: 0px;
-            justify-content: center;
-          }
-
-          .home{
-            text-decoration: none;
-            color: black;
-            border: 2px solid black;
-            padding: 0.5rem 1rem;
-            text-align: center;
-            justify-self: start;
-            margin-left: 2rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-          }
-
-          .home:hover{
-            background-color: black;
-            color: white;
-            transition: 0.3s;
-          }
-
-          .home:focus{
-            background-color: black;
-            color: white;
-            transition: 0.3s;
-          }
-
-          .enviar{
-            padding: 0.5rem 1.5rem;
-            margin-left: 2rem;
-            justify-self: center;
-            border: 2px solid black;
-          }
-
-          .enviar:hover{
-            background-color: black;
-            color: white;
-            transition: 0.3s;
-          }
-
-          .enviar:focus{
-            background-color: black;
-            color: white;
-            transition: 0.3s;
-          }
-
-      </style>
 
   </body>
 </html>
