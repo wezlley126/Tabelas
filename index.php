@@ -36,10 +36,6 @@
           <img src="imgs/excluir.png" alt="">
           <a href="/Tabelas/Apagar_tabela">Apagar tabela</a>
         </span>
-        <span class="opcoes_icons">
-          <img src="imgs/login.png" alt="">
-          <a href="/Tabelas/users">Login</a>
-        </span>
     </nav>
 
         <div id="weslley"><a href="https://github.com/wezlley126">© weslley</a></div>
