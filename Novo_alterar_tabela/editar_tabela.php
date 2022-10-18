@@ -128,10 +128,15 @@
           transition: 0.3s;
         }
 
+        #aviso_drop{
+          margin-left: 2rem;
+          font-weight: bold;
+        }
     </style>
 
     <div class="div_pai">
       <a class="home" href="/Tabelas">Home</a> <br>
+      <span id="aviso_drop">Para apagar uma linha escreva drop dentro do campo da segunda coluna apos o campo id.</span>
       <?php
         //Verifica se a tabela existe;
         $tabela = Limpar($_GET['tabela']);

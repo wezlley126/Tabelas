@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="Css/astyle.css">
   </head>
   <body>
-    <div class="button">
-      <a class="home" href="users/Deslogar.php">Deslogar</a>
-    </div>
     <span class="titulos">
       <h1>Sistema organizacional de tabelas</h1>
       <h2>Selecione a opção que deseja realizar.</h2>
